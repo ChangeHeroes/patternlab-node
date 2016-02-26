@@ -8,7 +8,8 @@ var pkg = require('./package.json'),
     strip_banner = require('gulp-strip-banner'),
     header = require('gulp-header'),
     nodeunit = require('gulp-nodeunit'),
-    browserSync = require('browser-sync').create();
+    browserSync = require('browser-sync').create(),
+    sass = require('gulp-sass');
 
 require('gulp-load')(gulp);
 var banner = [ '/** ',
@@ -87,10 +88,17 @@ gulp.task('cp:data', function(){
 });
 
 // CSS Copy
-gulp.task('cp:css', function(){
-  return gulp.src(path.resolve(paths().source.css, 'style.css'))
-    .pipe(gulp.dest(path.resolve(paths().public.css)))
-    .pipe(browserSync.stream());
+// gulp.task('cp:css', function(){
+//   return gulp.src(path.resolve(paths().source.css, 'style.css'))
+//     .pipe(gulp.dest(path.resolve(paths().public.css)))
+//     .pipe(browserSync.stream());
+// });
+
+// SCSS
+gulp.task('sass', function () {
+  return gulp.src('./source/css/style.scss')
+    .pipe(sass().on('error', sass.logError))
+    .pipe(gulp.dest('./public/css'));
 });
 
 // Styleguide Copy
@@ -131,7 +139,7 @@ gulp.task('connect', ['lab'], function () {
       ]
     }
   });
-  gulp.watch(path.resolve(paths().source.css, '**/*.css'), ['cp:css']);
+  gulp.watch(path.resolve(paths().source.css, '**/*.scss'), ['sass']);
 
   gulp.watch(path.resolve(paths().source.styleguide, '**/*.*'), ['cp:styleguide']);
 
@@ -164,7 +172,7 @@ gulp.task('lab-pipe', ['lab'], function(cb){
 
 gulp.task('default', ['lab']);
 
-gulp.task('assets', ['cp:js', 'cp:img', 'cp:font', 'cp:data', 'cp:css', 'cp:styleguide' ]);
+gulp.task('assets', ['cp:js', 'cp:img', 'cp:font', 'cp:data', 'sass', 'cp:styleguide' ]);
 gulp.task('prelab', ['clean', 'assets']);
 gulp.task('lab', ['prelab', 'patternlab'], function(cb){cb();});
 gulp.task('patterns', ['patternlab:only_patterns']);

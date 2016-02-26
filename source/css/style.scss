@@ -29,6 +29,8 @@
 /*------------------------------------*\
     $VARIABLES
 \*------------------------------------*/
+ @import "variables/colors";
+ @import "variables/typography";
 /*------------------------------------*\
     $MIXINS
 \*------------------------------------*/
@@ -41,21 +43,7 @@
 /*------------------------------------*\
     $RESET
 \*------------------------------------*/
-/* Border-Box http:/paulirish.com/2012/box-sizing-border-box-ftw/ */
-* {
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-}
-
-html, body, div, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, ol, ul, li, form, legend, label, table, header, footer, nav, section, figure {
-  margin: 0;
-  padding: 0;
-}
-
-header, footer, nav, section, article, hgroup, figure {
-  display: block;
-}
+  @import "global/reset";
 
 /*------------------------------------*\
     $GLOBAL ELEMENTS
@@ -63,67 +51,10 @@ header, footer, nav, section, article, hgroup, figure {
 /*------------------------------------*\
     $GLOBAL CLASSES
 \*------------------------------------*/
-/* Clearfix */
-.cf, .l-two-col, [role=main] {
-  *zoom: 1;
-}
 
-.cf:before, .l-two-col:before, [role=main]:before, .cf:after, .l-two-col:after, [role=main]:after {
-  content: " ";
-  /* 1 */
-  display: table;
-  /* 2 */
-}
-
-.cf:after, .l-two-col:after, [role=main]:after {
-  clear: both;
-}
-
-/* Completely remove from the flow and screen readers. */
-.is-hidden {
-  display: none !important;
-  visibility: hidden !important;
-}
-
-/* Completely remove from the flow but leave available to screen readers. */
-.is-vishidden {
-  position: absolute !important;
-  overflow: hidden;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  border: 0;
-  clip: rect(1px, 1px, 1px, 1px);
-}
-
-/* Floats */
-.right {
-  float: right;
-  padding: 0 0 1rem 1rem;
-}
-
-.right-search {
-  float: right;
-  padding: 0 0 1rem 0;
-}
-
-.left {
-  float: left;
-  padding: 0 1rem 1rem 0;
-}
-
-/* Text-Align */
-.align-right {
-  text-align: right;
-}
-
-.align-center {
-  text-align: center;
-}
-
-.align-left {
-  text-align: left;
-}
+@import "global/base";
+@import "global/floats";
+@import "global/text-align";
 
 /* Display Classes */
 @media all and (max-width: 46.8em) {
@@ -151,16 +82,16 @@ header, footer, nav, section, article, hgroup, figure {
 }
 
 .valid {
-  color: #089e00;
+  color: palette(green);
 }
 
 .error {
-  color: red;
+  color: palette(red);
 }
 
 body {
-  background: white;
-  font: 100%/1.5 "HelveticaNeue", "Helvetica", "Arial", sans-serif;
+  background: palette(white);
+  font: 100%/1.5 $font-family-primary;
   -webkit-text-size-adjust: 100%;
   color: #333333;
 }
@@ -191,7 +122,7 @@ h3, .gamma {
 
 /* Subheadings */
 .subheading {
-  font-family: Georgia, Times, "Times New Roman", serif;
+  font-family: $font-family-secondary;
   font-weight: normal;
 }
 
@@ -371,11 +302,11 @@ input[type="search"]::-webkit-search-decoration {
 
 /* Validation */
 .has-error {
-  border-color: red;
+  border-color: palette(red);
 }
 
 .is-valid {
-  border-color: #089e00;
+  border-color: palette(green);
 }
 
 /*------------------------------------*\
@@ -1280,7 +1211,7 @@ td {
 .acc-handle {
   background: #131313;
   color: white;
-  font-family: Georgia, Times, "Times New Roman", serif;
+  font-family: $font-family-secondary;
   font-weight: bold;
   display: block;
   position: relative;
@@ -1416,7 +1347,7 @@ td {
 }
 
 .alert-error {
-	color: #F00;
-	border-color: #F00;
+	color: palette(red);
+	border-color: palette(red);
 	background: #ffbebe;
 }
