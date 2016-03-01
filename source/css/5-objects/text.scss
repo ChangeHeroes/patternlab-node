@@ -38,8 +38,8 @@
 .grade {
   display: block;
   font-weight: bold;
-  background: gray;
-  color: white;
+  background: palette(gray);
+  color: palette(white);
   min-height: 4.5rem;
   padding-top: 1.5rem;
   text-align: center;
@@ -47,7 +47,7 @@
 
 /* Eyebrow */
 .eyebrow {
-  background: #333333;
+  background: palette(gray, dark);
   color: white;
   padding: 0.2em;
   display: inline-block;

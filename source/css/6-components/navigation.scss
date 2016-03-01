@@ -6,7 +6,7 @@
 .nav a {
   display: block;
   padding: 1rem;
-  border-top: 1px solid #eeeeee;
+  border-top: 1px solid palette(light);
 }
 .nav.active {
   max-height: 40em;
@@ -40,9 +40,9 @@
 }
 
 .header {
-  background: white;
+  background: palette(white);
   padding: 0;
-  border-bottom: 1px solid #dbdbdb;
+  border-bottom: 1px solid palette(shade);
 }
 
 .logo {
@@ -76,7 +76,7 @@
 }
 .pagination li {
   float: left;
-  border-right: 1px solid #eeeeee;
+  border-right: 1px solid palette(shade, light);
 }
 .pagination li:last-child {
   border: 0;

@@ -8,11 +8,11 @@
   margin-right: 0.25rem;
 }
 .social-share a {
-  background: #333333;
-  color: white;
+  background: palette(shade, dark);
+  color: palette(white);
   display: block;
   padding: 0.5rem;
 }
 .social-share a:hover {
-  background: gray;
+  background: palette(gray);
 }

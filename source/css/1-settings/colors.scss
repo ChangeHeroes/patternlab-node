@@ -40,6 +40,7 @@ $palettes: (
   shade: (
     base: #ddd,
     darker: #ccc,
+    darkest: #bbb,
     light: #dedede,
     lighter: #f1f1f1,
     lightest: #efefef,
@@ -86,4 +87,3 @@ $palettes: (
 @function palette($palette, $tone: 'base') {
     @return map-get(map-get($palettes, $palette), $tone);
 }
-

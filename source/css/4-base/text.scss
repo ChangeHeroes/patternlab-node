@@ -26,8 +26,8 @@ p {
 /* Blockquote */
 blockquote {
   font-style: italic;
-  border-left: 1px solid palatte(gray);
-  color: palatte(gray);
+  border-left: 1px solid palette(gray);
+  color: palette(gray);
   padding-left: 1rem;
   margin-bottom: 1rem;
 }
@@ -36,12 +36,12 @@ blockquote {
 hr {
   border: 0;
   height: 2px;
-  background: palatte(shade);
+  background: palette(shade);
   margin: 2rem 0;
 }
 
 abbr {
-  border-bottom: 1px dotted palatte(gray);
+  border-bottom: 1px dotted palette(gray);
   cursor: help;
 }
 

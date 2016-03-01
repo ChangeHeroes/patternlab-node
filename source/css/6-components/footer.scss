@@ -4,22 +4,22 @@
 .footer {
   clear: both;
   overflow: hidden;
-  background: #131313;
-  color: white;
+  background: palette(gray, dark);
+  color: palette(white);
   line-height: 1.2;
 }
 .footer .lc, .footer .header, .footer [role=main] {
   padding: 1rem 1rem 0;
 }
 .footer a {
-  color: #f9f9f9;
+  color: palette(shade, lighter);
 }
 
 .nav-footer {
   margin: -1rem -1rem 1rem;
 }
 .nav-footer li {
-  border-bottom: 1px solid #333333;
+  border-bottom: 1px solid palette(gray, dark);
 }
 @media all and (min-width: 46.8em) {
   .nav-footer li {

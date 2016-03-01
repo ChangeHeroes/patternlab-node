@@ -8,7 +8,7 @@
 .tabs li {
   display: table-cell;
   text-align: center;
-  border-right: 1px solid #dddddd;
+  border-right: 1px solid palette(shade);
 }
 .tabs li:last-child {
   border-right: 0;
@@ -19,9 +19,9 @@
   background: gray;
 }
 .tabs a:hover, .tabs a:focus {
-  background: #dddddd;
+  background: palette(shade);
 }
 .tabs a.active {
-  background: #333333;
-  color: white;
+  background: palette(gray, dark);
+  color: palette(white);
 }

@@ -1,3 +1,5 @@
+// TODO we should consider SVG fonts instead of loading a library, however this will work for MVP
+
 /* Icon Font */
 @font-face {
   font-family: 'icons';
@@ -17,7 +19,7 @@
   -webkit-font-smoothing: antialiased;
 }
 
-.icon-twitter:before, .icon-stumbleupon:before, .icon-pinterest:before, .icon-linkedin:before, .icon-google-plus:before, .icon-search:before, .icon-play:before, .icon-menu:before, .icon-arrow-left:before, .icon-arrow-right:before, .icon-bubble:before, .icon-facebook:before, .icon-feed:before, .icon-youtube:before, .icon-tag:before, .icon-tumblr:before, .icon-instagram, .icon-podcast, .icon-apple, .icon-android, .icon-arrow:after, .icon-envelope:before {
+[class^="icon"] {
   font-family: 'icons';
   speak: none;
   font-style: normal;

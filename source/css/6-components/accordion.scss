@@ -3,14 +3,14 @@
 }
 
 .acc-handle {
-  background: #131313;
-  color: white;
+  background: palette(gray, darker);
+  color: palette(white);
   font-family: $font-family-secondary;
   font-weight: bold;
   display: block;
   position: relative;
   padding: 0.5rem;
-  border-bottom: 1px solid #dddddd;
+  border-bottom: 1px solid palette(shade);
 }
 .acc-handle:after {
   content: "+";
@@ -18,10 +18,10 @@
 }
 .acc-handle:hover {
   color: white;
-  background: #333333;
+  background: palette(gray, dark);
 }
 .acc-handle.active {
-  background: #333333;
+  background: palette(gray, dark);
 }
 .acc-handle.active:after {
   content: "-";

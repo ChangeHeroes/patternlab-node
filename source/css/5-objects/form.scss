@@ -8,7 +8,7 @@
 .inline-form input[type=submit], .inline-form button, .inline-form .btn {
   font-size: 0.875em;
   padding: 0.65rem 1.3rem;
-  background: #333333;
+  background: palette(gray, dark);
   position: absolute;
   top: 0;
   right: 0;
@@ -16,8 +16,8 @@
   width: auto;
 }
 .inline-form input[type=submit]:hover, .inline-form input[type=submit]:focus, .inline-form button:hover, .inline-form button:focus, .inline-form .btn:hover, .inline-form .btn:focus {
-  background: gray;
-  color: white;
+  background: palette(gray);
+  color: palette(white);
 }
 
 .inline-search-results-form {
