@@ -1,0 +1,66 @@
+/* Headings */
+/*Further Reading: http:/csswizardry.com/2012/02/pragmatic-practical-font-sizing-in-css/ */
+h1, .alpha {
+  line-height: 1.2;
+}
+
+h2, .beta {
+  line-height: 1.2;
+}
+
+h3, .gamma {
+  line-height: 1.2;
+}
+
+/* Subheadings */
+.subheading {
+  font-family: $font-family-secondary;
+  font-weight: normal;
+}
+
+/* Text-Related Elements */
+p {
+  margin-bottom: 1rem;
+}
+
+/* Blockquote */
+blockquote {
+  font-style: italic;
+  border-left: 1px solid palatte(gray);
+  color: palatte(gray);
+  padding-left: 1rem;
+  margin-bottom: 1rem;
+}
+
+/* Horizontal Rule */
+hr {
+  border: 0;
+  height: 2px;
+  background: palatte(shade);
+  margin: 2rem 0;
+}
+
+abbr {
+  border-bottom: 1px dotted palatte(gray);
+  cursor: help;
+}
+
+ol, ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* Definition Lists */
+dl {
+  overflow: hidden;
+  margin: 0 0 1rem;
+}
+
+dt {
+  font-weight: bold;
+}
+
+dd {
+  margin-left: 0;
+}

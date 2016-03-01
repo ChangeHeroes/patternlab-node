@@ -1,0 +1,9 @@
+/* Links */
+a {
+  color: palatte(gray, dark);
+  text-decoration: none;
+  outline: 0;
+}
+a:hover, a:focus {
+  color: palatte(gray);
+}
