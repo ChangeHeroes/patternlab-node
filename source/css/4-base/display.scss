@@ -38,3 +38,9 @@ body {
   -webkit-text-size-adjust: 100%;
   color: palette(gray, dark);
 }
+
+@media all and (max-width: 50em) {
+  html {
+    font-size: 15px;
+  }
+}

@@ -28,7 +28,8 @@ button, input, select, textarea {
 input, textarea {
   width: 100%;
   border: 1px solid palette(shade, darker);
-  padding: 0.5rem 0.65rem;
+  padding: 0.8rem 0.65rem;
+  background: palette(shade, lighter);
 }
 
 input[type=text],
@@ -39,14 +40,25 @@ textarea {
   -webkit-appearance: none;
 }
 
-button,
-input[type="submit"] {
-  padding: 0.5rem;
-  background: palette(gray, dark);
-  border: 1px solid palette(gray);
+input::placeholder,
+input::-webkit-input-placeholder {
+  color: palette(gray, lightest);
+}
+
+form button,
+form .button,
+input[type=submit] {
+  width: 100%;
+}
+
+form button,
+input[type=submit] {
+  background: palette(blue);
+  padding: 0.8rem 0.65rem;
+  border: 1px solid palette(blue, darker);
   color: palette(white);
   cursor: pointer;
-  width: auto;
+  border-radius: 3px;
 }
 
 input[type="checkbox"],

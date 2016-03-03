@@ -1,6 +1,22 @@
-.field-container {
+
+// INFO: input[type=submit] rule also extends the .button class in the button.scss file
+
+.field-container,
+.input-group {
   margin-bottom: 1rem;
 }
+
+form {
+  // link buttons within a form field are designed to
+  .btn-link {
+    display: inline-block;
+    color: palette(gray);
+  }
+}
+
+
+// Horizontal Form Rules
+// =====================
 
 .form-horizontal {
   @media all and (min-width: 40em) {
@@ -20,7 +36,6 @@
     }
     input[type="submit"] {
       margin-left: 25%;
-      width: auto;
     }
   }
   @media all and (max-width: 40em) {
@@ -32,9 +47,6 @@
     }
   }
 }
-
-
-
 
 
 

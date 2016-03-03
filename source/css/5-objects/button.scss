@@ -1,24 +1,27 @@
 /*------------------------------------*\
     $BUTTONS
 \*------------------------------------*/
-.btn {
+.button {
   display: inline-block;
-  background: palette(gray, dark);
-  color: palette(white);
-  line-height: 1;
-  font-weight: bold;
-  padding: 1rem;
+  padding: 0.8rem 0.65rem;
   border: 0;
   text-align: center;
-}
-.btn:hover, .btn:focus {
-  color: palette(white);
-}
-.btn.disabled {
-  background: palette(shade);
-  color: palette(gray, lightest);
+  border-width: 1px;
+  border-style: solid;
+  border-color: transparent;
+  line-height: 1.2;
 }
 
+// all classes that start with .btn will inherit the .button class rules
+[class^=btn],
+input[type=submit] {
+  @extend .button;
+}
+
+
+/*------------------------------------*\
+    $BUTTON SIZING
+\*------------------------------------*/
 .btn-small {
   padding: 0.5rem;
 }
@@ -30,6 +33,58 @@
   font-weight: normal;
 }
 
+
+/*------------------------------------*\
+    $BASE BUTTONS
+\*------------------------------------*/
+.btn {
+  background: palette(blue, dark);
+  border-color: palette(blue, dark);
+  color: palette(white);
+  font-weight: bold;
+
+  &:hover,
+  &:focus {
+    color: palette(white);
+  }
+  &.disabled {
+    background: palette(shade);
+    color: palette(gray, lightest);
+  }
+}
+
+
+/*------------------------------------*\
+    $TEXT BUTTONS
+\*------------------------------------*/
+.btn-text,
 .text-btn {
-  font-style: italic;
+  color: palette(gray);
+}
+
+
+/*------------------------------------*\
+    $SOCIAL BUTTONS
+\*------------------------------------*/
+
+// facebook
+.btn-facebook {
+  background: palette(facebook);
+  // border-color: palette(facebook);
+}
+
+
+
+/*------------------------------------*\
+    $BORDER BUTTONS
+\*------------------------------------*/
+
+// facebook
+.btn-border {
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 3px;
+  border-color: palette(gray, light);
+  color: palette(gray, light);
+  background: inherit;
 }

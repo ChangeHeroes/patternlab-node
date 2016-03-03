@@ -39,20 +39,49 @@
   }
 }
 
+
+/*  ---------------  *\
+    Header Elements
+\*  ---------------  */
+
 .header {
   background: palette(white);
   padding: 0;
   border-bottom: 1px solid palette(shade);
+  height: 3rem;
+
+  .header-group {
+    &.left {
+      float: left;
+      margin-right: 0.4em;
+    }
+    &.right {
+      float: right;
+      margin-left: 0.4em;
+    }
+  }
+
+  [class^=btn] {
+    padding: 0.5rem 0.4rem;
+    margin: 0.25rem
+  }
 }
+
+
+
+
+
+
 
 .logo {
   float: left;
-  max-width: 8rem;
-  margin: 0.4rem;
+  padding: 0.6rem;
+  max-height: 100%;
 }
-@media all and (min-width: 46.8em) {
+@media all and (max-width: 46.8em) {
   .logo {
-    max-width: 9rem;
+    // max-width: 9rem;
+    padding: 0.2rem;
   }
 }
 

@@ -1,15 +1,21 @@
 /* Headings */
 /*Further Reading: http:/csswizardry.com/2012/02/pragmatic-practical-font-sizing-in-css/ */
+
 h1, .alpha {
   line-height: 1.2;
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
 }
 
 h2, .beta {
   line-height: 1.2;
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
 }
 
 h3, .gamma {
   line-height: 1.2;
+  font-size: 1.4rem;
 }
 
 /* Subheadings */
@@ -21,6 +27,7 @@ h3, .gamma {
 /* Text-Related Elements */
 p {
   margin-bottom: 1rem;
+  line-height: 1.5rem;
 }
 
 /* Blockquote */

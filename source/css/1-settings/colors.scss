@@ -24,7 +24,8 @@
 // 1. Default Colors
 // ================================================================================
 $_facebook: #3b5998;
-$_green: #5cb85c;
+$_green: #4cb94c;
+$_blue: #337ab7;
 
 
 // 2. Building palettes object
@@ -34,7 +35,7 @@ $palettes: (
     base: #000
   ),
   white: (
-    base: #fff
+    base: #fff,
   ),
   shade: (
     base: #ddd,
@@ -45,7 +46,7 @@ $palettes: (
     lightest: #efefef,
   ),
   gray: (
-    base: #555,
+    base: #525252,
     dark: #333,
     darker: #222,
     light: #666,
@@ -53,8 +54,9 @@ $palettes: (
     lightest: #aaa,
   ),
   blue: (
-    base: #428bca,
-    light: #5bc0de,
+    darker: darken($_blue, 5%),
+    base: $_blue,
+    light: lighten($_blue, 5%),
   ),
   green: (
     base: $_green,
@@ -75,7 +77,7 @@ $palettes: (
   ),
   facebook: (
     base: $_facebook,
-    darker: darken($_facebook, 10%),
+    dark: darken($_facebook, 10%),
   )
 );
 
